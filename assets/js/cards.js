@@ -7,11 +7,13 @@ function append(parent, el) {
 }
 
 const section = document.querySelector('.cards')
-let idBotao
 let url = window.location.href
 let salgadosPage = 'salgados.html'
 let docesPage = 'doces.html'
 let dataRecipe
+let idBotao
+let currentPage
+let currentButton
 
 
 fetch("js/db.json")
@@ -47,7 +49,7 @@ fetch("js/db.json")
             description.innerHTML = `${receita.descricao}`
             author.innerHTML = `por: <a href=${receita.contato} target="_blank">${receita.autor}</a>`
             porcao.innerHTML = `serve: ${receita.rendimento}`
-            botao.innerHTML = `<a href="../receita.html">Ver Receita</a>`
+            botao.innerHTML = 'Ver Receita'
 
             //chamando eles
             append(divImage, img)
@@ -61,8 +63,21 @@ fetch("js/db.json")
             append(section, divAll)
 
             botao.addEventListener('click', (e) => {
+
+                currentPage = window.location.href.split('assets/')[1]
                 idBotao = e.target.id
-                console.log(idBotao)
+
+                fetch("js/db.json")
+                    .then((response) => response.json())
+                    .then(function(data) {
+                        if(currentPage === 'salgados.html') {
+                            currentButton = data.salgados
+                        } else if(currentPage === 'doces.html') {
+                            currentButton = data.doces
+                        }
+                        console.log(currentButton[idBotao])
+                    })
+
             })
 
         })
@@ -71,6 +86,14 @@ fetch("js/db.json")
     .catch(function(error) {
         console.log(error)
     })
+
+
+
+
+
+
+
+
 
 
 
