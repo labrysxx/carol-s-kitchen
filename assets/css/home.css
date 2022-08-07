@@ -1,19 +1,15 @@
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.quote{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
+#call-field{
+    width: 60%;
+    margin: 100px 0 100px 0;
     text-align: center;
-    margin: 40px 0;
-    color: #6C757D;
+    font-size: 20px;
     line-height: 30px;
 }
+
+#call-field span{
+    color: #FF5F00;
+}
+
 
 
 
