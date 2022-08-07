@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahianita&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E9ECF1;
+    justify-content: space-between;
+}
+
+header{
+    padding: 20px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.identity h1{
+    color: #FF5F00;
+    margin-bottom: 2px;
+    font-family: 'Bahianita', cursive;
+    font-size: 80px;
+}
+
+header nav ul{
+    margin-top: 50px;
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+header nav ul li{
+    margin-right: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #414141;
+}
+
+header nav ul li:last-child{
+    margin-right: 0;
+}
+
+footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 20vh;
+    padding-bottom: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #414141;
+}
+
+.separator{
+    width: 50%;
+    height: 1px;
+    background-color: #E32C32;
+    margin-top: 5px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+section .card{
+    padding: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    background-color: #dbd5bc54;
+    border-radius: 8px;
+    border: 1px solid #6C757D;
+    height: fit-content;
+    width: 250px;
+}
+
+img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.title{
+    color: #414141;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.title-card{
+    font-weight: bold;
+    color: #414141;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #414141;
+}

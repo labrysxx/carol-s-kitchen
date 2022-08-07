@@ -1,0 +1,84 @@
+{
+    "salgados": [
+    {
+      "id": 0,
+      "nome": "Guioza",
+      "descricao": "crocante, suculenta e levinha",
+      "autor": "Caroline Faria",
+      "contato": "https://www.linkedin.com/in/caroline-faria-dev-front-end/",
+      "rendimento": 2,
+      "tempo": "30 min",
+      "ingredientes": [
+        "isso",
+        "aquilo",
+        "aquilo outro"
+      ],
+      "imagem": "img/guioza.png",
+      "extra": "have fun!"
+    },
+    {
+      "id": 1,
+      "nome": "Esfiha",
+      "descricao": "massa macia, fininha e recheio suculento e cremoso",
+      "autor": "Iracema Nunes",
+      "rendimento": 30,
+      "tempo": "2 horas",
+      "ingredientes": [
+      "isso",
+      "aquilo",
+      "aquilo outro"
+      ],
+      "imagem": "img/esfiha.jpg",
+      "extra": "have fun!"
+    },
+    {
+      "id": 2,
+      "nome": "Lamen",
+      "descricao": "azedinho, suculento e maravilhoso",
+      "autor": "Angela",
+      "rendimento": 2,
+      "tempo": "30 min",
+      "ingredientes": [
+      "isso",
+      "aquilo",
+      "aquilo outro"
+      ],
+      "imagem": "img/lamen.jpg",
+      "extra": "have fun!"
+    },
+    {
+      "id": 3,
+      "nome": "Sopa de Mandioca",
+      "descricao": "saborosa demais",
+      "autor": "Marcia Regina",
+      "rendimento": 2,
+      "tempo": "1 hora",
+      "ingredientes": [
+      "isso",
+      "aquilo",
+      "aquilo outro"
+      ],
+      "imagem": "img/sopa.jpg",
+      "extra": "have fun!"
+    }
+  ],
+  "doces": [
+    {
+      "id": 0,
+      "nome": "Brownie",
+      "descricao": "A delicious cake with chocolate and hazelnuts",
+      "autor": "Marcia Regina",
+      "rendimento": 2,
+      "tempo": "1 hora",
+
+      "ingredientes": [
+        "isso",
+        "aquilo",
+        "aquilo outro"
+      ],
+      "imagem": "img/brownie.png",
+      "extra": "have fun!"
+    }
+  ]
+
+}

@@ -1,0 +1,19 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    text-align: center;
+    margin: 40px 0;
+    color: #6C757D;
+    line-height: 30px;
+}
+
+
+
