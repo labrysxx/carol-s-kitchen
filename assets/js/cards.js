@@ -7,7 +7,7 @@ function append(parent, el) {
 }
 
 const section = document.querySelector('.cards')
-/*let idBotao*/
+let idBotao
 let url = window.location.href
 let salgadosPage = 'salgados.html'
 let docesPage = 'doces.html'
@@ -47,7 +47,7 @@ fetch("js/db.json")
             description.innerHTML = `${receita.descricao}`
             author.innerHTML = `por: <a href=${receita.contato} target="_blank">${receita.autor}</a>`
             porcao.innerHTML = `serve: ${receita.rendimento}`
-            botao.innerHTML = 'Ver Receita'
+            botao.innerHTML = `<a href="../receita.html">Ver Receita</a>`
 
             //chamando eles
             append(divImage, img)
@@ -60,10 +60,10 @@ fetch("js/db.json")
             append(divAll, divText)
             append(section, divAll)
 
-            /*botao.addEventListener('click', (e) => {
+            botao.addEventListener('click', (e) => {
                 idBotao = e.target.id
                 console.log(idBotao)
-            })*/
+            })
 
         })
 
