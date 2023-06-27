@@ -16,7 +16,7 @@ let currentPage
 let currentButton
 
 
-fetch("http://localhost:3333/receitas")
+fetch("https://receitas-7774.onrender.com/receitas")
     .then((response) => response.json())
     .then(function(data) {
         console.log(data)
