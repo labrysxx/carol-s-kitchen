@@ -16,7 +16,6 @@ let dataRecipe
 fetch("https://receitas-7774.onrender.com/receitas")
     .then((response) => response.json())
     .then(function(data) {
-        console.log(data)
         //verificação da localização da pagina
         if(url.match(salgadosPage)) {
             dataRecipe = data.filter((item) => item.categoria === 'salgados')
