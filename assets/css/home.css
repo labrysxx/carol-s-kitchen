@@ -6,6 +6,10 @@
     line-height: 30px;
 }
 
+#call-field p {
+    color: #6C757D;
+}
+
 #call-field span{
     color: #FF5F00;
 }
