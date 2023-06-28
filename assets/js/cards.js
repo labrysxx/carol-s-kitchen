@@ -11,9 +11,6 @@ let url = window.location.href
 let salgadosPage = 'salgados.html'
 let docesPage = 'doces.html'
 let dataRecipe
-let idBotao
-let currentPage
-let currentButton
 
 
 fetch("https://receitas-7774.onrender.com/receitas")
@@ -27,7 +24,6 @@ fetch("https://receitas-7774.onrender.com/receitas")
             dataRecipe = data.filter((item) => item.categoria === 'doces')
         }
         createCardRecipe()
-
     })
     .catch(function(error) {
         console.log(error)
@@ -42,7 +38,7 @@ function openRecipePage() {
             e.preventDefault()
             section.innerHTML = ''
             title.innerHTML = `Receita de ${e.target.parentNode.parentNode.querySelector('.title-card').innerHTML}`
-
+            showRecipeIngredients(e)
         })
     }
 }
@@ -64,7 +60,7 @@ function createCardRecipe() {
         let porcao = createNode('p')
         porcao.classList.add('small-text')
         let botao = createNode('button')
-        botao.setAttribute('id', `${receita.id}`)
+        botao.setAttribute('id', `${receita._id}`)
 
         //atribuindo valores a eles
         img.src = `${receita.imagem}`
@@ -88,7 +84,30 @@ function createCardRecipe() {
     openRecipePage()
 }
 
+function showRecipeIngredients(e) {
+    const currentRecipe = dataRecipe.filter((recipe) => recipe._id === e.target.id)[0]
+    let recipe_template = `
+        <section class="recipe">
+            <img src=${currentRecipe.imagem} alt="">
+            <span class="recipe_description">${currentRecipe.descricao}</span>
+            <span class="recipe_rend">Rende: ${currentRecipe.rendimento}</span>
+            <span class="recipe_spend">Tempo de preparo: ${currentRecipe.tempo}</span>
+            <span class="recipe_author">Autor da receita: ${currentRecipe.autor}</span>
+            <span class="ingredient_title">Ingredientes:</span>
+            <ul>
+                ${upIngredients(currentRecipe)}
+            </ul>
+        </section>
+    `
+    section.insertAdjacentHTML('afterbegin', recipe_template)
+}
 
-
+function upIngredients(recipe) {
+    let ingredientsHtml = '';
+    recipe.ingredientes.forEach((ingrediente) => {
+        ingredientsHtml += `<li class='ingredient'>${ingrediente}</li>`;
+    });
+    return ingredientsHtml;
+}
 
 

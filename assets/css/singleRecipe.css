@@ -1,0 +1,14 @@
+.recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe img {
+    width: 400px;
+}
+
+.recipe_description {
+    color: darkgrey;
+}
