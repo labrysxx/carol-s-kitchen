@@ -26,6 +26,16 @@
                 <li id='doce'><a href="doces.html">Doces</a></li>
             </ul>
         </nav>
+        <p class="filter_tag">Filtre suas receitas pelos ingredientes que deseja</p>
+        <nav id="filter_field">
+            <form id="form">
+                <label>
+                    <input type="text" placeholder="ex.: tomate" class="input_ingredient">
+                </label>
+                <input type="submit" value="pesquisar">
+            </form>
+            <div class="filters"></div>
+        </nav>
     </header>
 
     <main>
@@ -40,6 +50,7 @@
     <footer id="footer"></footer>
 
     <script src="js/cards.js"></script>
+    <script src="js/filter.js"></script>
 
 </body>
 </html>

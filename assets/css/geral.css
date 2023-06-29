@@ -137,3 +137,57 @@ img{
 .description {
     color: #414141;
 }
+
+.filter_tag {
+    color: #6C757D;
+    margin-top: 20px;
+}
+
+#filter_field {
+    width: 60%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.input_ingredient {
+    border: none;
+    width: 100%;
+}
+
+.input_ingredient:focus {
+    outline: none;
+}
+
+#form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters {
+    display: flex;
+    margin-top: 10px;
+}
+
+.ingredientFiltered {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 8px;
+    background-color: rgba(108, 117, 125, 0.43);
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.ingredientFiltered:first-child {
+    margin-left: 0;
+}
+
+.deleteBtn {
+    color: white;
+    background-color: rgba(171, 52, 52, 0.87);
+    padding: 8px;
+    border-radius: 0 8px 8px 0;
+    margin-left: 8px;
+}
