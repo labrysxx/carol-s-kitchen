@@ -28,7 +28,6 @@ fetch("https://receitas-7774.onrender.com/receitas")
         console.log(error)
     })
 
-
 function openRecipePage() {
     const buttons = document.querySelectorAll('button')
     const title = document.querySelector('.title')
@@ -92,10 +91,12 @@ function showRecipeIngredients(e) {
             <span class="recipe_rend">Rende: ${currentRecipe.rendimento}</span>
             <span class="recipe_spend">Tempo de preparo: ${currentRecipe.tempo}</span>
             <span class="recipe_author">Autor da receita: ${currentRecipe.autor}</span>
-            <span class="ingredient_title">Ingredientes:</span>
+            <span class="section_title">Ingredientes:</span>
             <ul>
                 ${upIngredients(currentRecipe)}
             </ul>
+            <span class="section_title">Segredo:</span>
+            <span class="secret">${currentRecipe.segredo}</span>
         </section>
     `
     section.insertAdjacentHTML('afterbegin', recipe_template)
