@@ -24,6 +24,11 @@ function addFilter(e) {
     let chosenIngredient = e.target.value.toLowerCase()
     const filters = document.querySelector('.filters')
 
+    if(!chosenIngredient) {
+        alert('Digite um ingrediente.')
+        return
+    }
+
     let divIngredient = document.createElement('div')
     const deleteIngredient = document.createElement('div')
 

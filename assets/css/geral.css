@@ -13,6 +13,7 @@ body{
     align-items: center;
     background-color: #E9ECF1;
     justify-content: space-between;
+    min-height: 100vh;
 }
 
 main{
@@ -62,9 +63,9 @@ header nav ul li:last-child{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0;
     width: 100%;
     text-align: center;
-    margin: 50px 0 40px 0;
     color: #6C757D;
     line-height: 30px;
     font-size: 13px;
@@ -138,22 +139,20 @@ img{
     color: #414141;
 }
 
-.filter_tag {
-    color: #6C757D;
-    margin-top: 20px;
-}
-
 #filter_field {
     width: 40%;
     height: auto;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 32px;
+    box-shadow: 0 0 10px 0 rgba(255, 106, 40, 0.5);
 }
 
 .input_ingredient {
+    letter-spacing: 3px;
     border: none;
+    text-transform: uppercase;
 }
 
 label, .input_ingredient {
@@ -167,6 +166,7 @@ label, .input_ingredient {
 #form {
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
 }
 
 .filters {
@@ -191,4 +191,9 @@ label, .input_ingredient {
     padding: 8px;
     border-radius: 0 8px 8px 0;
     margin-left: 8px;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+    background-color: rgba(171, 52, 52, 0.52);
 }
