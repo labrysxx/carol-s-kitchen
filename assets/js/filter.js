@@ -48,15 +48,22 @@ function clearForm() {
 }
 
 function showFilteredRecipes() {
-    const filteredRecipes = dataRecipe.filter((recipe) => {
+    checkLocalStorage()
+    let filteredRecipes = dataRecipe.filter((recipe) => {
         return recipes.every((chosenIngredient) => {
             return recipe.ingredientes.some((ingredient) => {
                 return ingredient.includes(chosenIngredient);
             });
         });
     });
+
+    createCardRecipe(filteredRecipes)
+
+    if(filteredRecipes.length === 0) {
+        document.querySelector('.quote').children[0].innerHTML = 'Nenhuma receita encontrada :('
+    }
+
     deleteIngredient()
-    //console.log(filteredRecipes);
 }
 
 function deleteIngredient() {

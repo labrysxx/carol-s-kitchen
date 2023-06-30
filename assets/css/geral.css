@@ -144,7 +144,7 @@ img{
 }
 
 #filter_field {
-    width: 60%;
+    width: 40%;
     height: auto;
     background-color: white;
     border-radius: 10px;
@@ -154,6 +154,9 @@ img{
 
 .input_ingredient {
     border: none;
+}
+
+label, .input_ingredient {
     width: 100%;
 }
 
@@ -169,6 +172,7 @@ img{
 .filters {
     display: flex;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .ingredientFiltered {
@@ -178,10 +182,7 @@ img{
     background-color: rgba(108, 117, 125, 0.43);
     border-radius: 8px;
     margin-left: 10px;
-}
-
-.ingredientFiltered:first-child {
-    margin-left: 0;
+    margin-top: 10px;
 }
 
 .deleteBtn {

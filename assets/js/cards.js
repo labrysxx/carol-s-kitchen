@@ -22,7 +22,7 @@ fetch("https://receitas-7774.onrender.com/receitas")
         } else if(url.match(docesPage)) {
             dataRecipe = data.filter((item) => item.categoria === 'doces')
         }
-        createCardRecipe()
+        createCardRecipe(dataRecipe)
     })
     .catch(function(error) {
         console.log(error)
@@ -41,7 +41,8 @@ function openRecipePage() {
     }
 }
 
-function createCardRecipe() {
+function createCardRecipe(dataRecipe) {
+    section.innerHTML = ''
     dataRecipe.forEach((receita) => {
         //criando elementos
         let divAll = createNode('div')
